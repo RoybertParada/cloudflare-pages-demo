@@ -207,15 +207,18 @@
         h.parentNode.insertBefore(j, h);
       })(window, document, 'script', 'https://paxer.rocket.chat/livechat');
       RocketChat(function() {
-			  this.setTheme({
-				  color: '#04436A', // widget title background color
-				  fontColor: '#FFFFFF', // widget title font color
-				  iconColor: '#1d74f5', // widget icon color
-				  title: "Welcome to Rocket.Chat", // default widget title when the status of service is online
-				  offlineTitle: "Service is offline", // default widget title when the status of service is online
-			  });
-        this.setDepartment('Hotel1');
-		  });
+	      this.initialize({
+        	theme: {
+            		color: '#04436A',
+            		fontColor: '#FFFFFF',
+            		iconColor: '#1d74f5',
+            		title: "Welcome to Rocket.Chat",
+           		offlineTitle: "Service is offline",
+        	},
+        	department: 'Hotel1',
+        	language: 'en',
+	      });
+      });
     </script>
   </body>
 </html>
